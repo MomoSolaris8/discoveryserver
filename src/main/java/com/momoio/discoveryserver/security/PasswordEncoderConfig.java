@@ -1,4 +1,4 @@
-package com.momoio.authorizationserver.security;
+package com.momoio.discoveryserver.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.momoio.authorizationserver.model;
+package com.momoio.discoveryserver.model;
 
 import lombok.*;
 
@@ -18,7 +18,9 @@ public class User {
     private String userUuid;
     private String firstName;
     private String lastName;
+    private String username;
     private String email;
+    private String memberId;
     private String password;
     private String phone;
     private String bio;

@@ -1,4 +1,4 @@
-package com.momoio.authorizationserver.exception;
+package com.momoio.discoveryserver.exception;
 
 /**
  * @author Momo

@@ -1,9 +1,6 @@
 spring:
   application:
-    name: authorizationserver
-  cloud:
-    discovery:
-      enabled: true
+    name: discoveryserver
   profiles:
     active: ${ACTIVE_PROFILE:dev}
   datasource:
@@ -29,13 +26,18 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
+    hostname: localhost
   client:
     service-url:
-      defaultZone: http://${USER_NAME}:${PASSWORD}@localhost:5002/eureka/
-ui:
-  app:
-    url: ${UI_APP_URL}
-
-keys:
-  private: ${PRIVATE_KEY}
-  public: ${PUBLIC_KEY}
+      defaultZone: http://${USER_NAME}:${PASSWORD}@${eureka.instance.hostname}:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    expected-client-renewal-interval-seconds: 10
+    enable-self-preservation: false
+    renewal-percent-threshold: 0.33
+    wait-time-in-ms-when-sync-empty: 0
+    peer-node-read-timeout-ms: 30000
+    
+server:
+  port: ${SERVER_PORT}
