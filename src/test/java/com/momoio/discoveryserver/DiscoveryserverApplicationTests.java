@@ -1,10 +1,10 @@
-package com.momoio.authorizationserver;
+package com.momoio.discoveryserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthorizationserverApplicationTests {
+class DiscoveryserverApplicationTests {
 
 	@Test
 	void contextLoads() {
